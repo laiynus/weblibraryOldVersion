@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
+   
+   <import resource="web-library-database.xml"/>
+   
+   <!-- Definition for staffJDBCTemplate bean -->
+	<bean id="usersJDBCTemplate" class="by.khrapovitsky.dao.UsersJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+    
+    
+   <!-- Definition for bookmarksJDBCTemplate bean -->
+	<bean id="bookmarksJDBCTemplate" class="by.khrapovitsky.dao.BookMarksJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+    
+    <!-- Definition for booksJDBCTemplate bean -->
+	<bean id="booksJDBCTemplate" class="by.khrapovitsky.dao.BooksJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	   <!-- Definition for usersrolesJDBCTemplate bean -->
+	<bean id="usersRoleJDBCTemplate" class="by.khrapovitsky.dao.UsersRoleJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Definition for publisherJDBCTemplate bean -->
+	<bean id="publishHouseJDBCTemplate" class="by.khrapovitsky.dao.PublishHousesJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Definition for fileTypeJDBCTemplate bean -->
+	<bean id="fileTypeJDBCTemplate" class="by.khrapovitsky.dao.FileTypesJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Definition for fileStatusJDBCTemplate bean -->
+	<bean id="fileStatusJDBCTemplate" class="by.khrapovitsky.dao.FileStatusJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Definition for fileStatusJDBCTemplate bean -->
+	<bean id="authorsJDBCTemplate" class="by.khrapovitsky.dao.AuthorsJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- Definition for fileStatusJDBCTemplate bean -->
+	<bean id="authorsToBookJDBCTemplate" class="by.khrapovitsky.dao.AuthorsToBookJDBCTemplate">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+    
+ </beans>
